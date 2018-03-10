@@ -30,8 +30,7 @@ if request.method == "POST":
     "id": "Sarvesh19"
     } 
     )
-    else:
-        return 'Not Authorize Guy'
+
     
 
 if __name__ == '__main__':
