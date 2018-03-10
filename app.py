@@ -15,7 +15,7 @@ def homepage():
 
 @app.route('/getUser', methods=['POST'])
 @cross_origin()
-def getUser():
+def getUser(request):
 userName = request.form.get('userName')
 password = request.form.get('password')
 
