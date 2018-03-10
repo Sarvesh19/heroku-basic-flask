@@ -13,10 +13,16 @@ def homepage():
     return jsonify( { 'tasks': "hello homePage" } )
 
 
-@app.route('/getUser', methods=['POST'])
+@app.route('/getUser', methods=["GET","POST"])
 @cross_origin()
 def getUser():
  
+if request.method == "POST":
+    
+    attempted_username = request.form['userName']
+     attempted_password = request.form['password']
+
+        if attempted_username == "sarvesh" and attempted_password == "sarvesh123":
     
      return jsonify( {
     "username": "sarvesh",
@@ -24,6 +30,8 @@ def getUser():
     "id": "Sarvesh19"
     } 
     )
+    else:
+        return 'Not Authorize Guy'
     
 
 if __name__ == '__main__':
