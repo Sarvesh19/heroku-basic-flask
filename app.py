@@ -13,6 +13,24 @@ def homepage():
     <img src="http://loremflickr.com/600/400" />
     """.format(time=the_time)
 
+class Employees(Resource):
+    def get(self):
+
+        return {
+    "employees": [
+        1, 
+        2, 
+        3, 
+        4, 
+        5, 
+        6, 
+        7, 
+        8
+    ]
+} # Fetches first column that is Employee ID
+
+api.add_resource(Employees, '/employees') # Route_1
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
 
