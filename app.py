@@ -4,7 +4,7 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = 'Content-Type: application/json'
 
 @app.route('/')
 @cross_origin()
@@ -15,11 +15,10 @@ def homepage():
 
 @app.route('/getUser', methods=['POST'])
 @cross_origin()
-def getUser(request):
-userName = request.form.get('userName')
-password = request.form.get('password')
+def getUser():
+data = request.get_json()
 
-if userName == 'sarvesh' and password == 'sarvesh123': 
+if data.userName == 'sarvesh' and data.password == 'sarvesh123': 
     
      return jsonify( {
     "username": "sarvesh",
