@@ -1,7 +1,10 @@
 from flask import Flask, jsonify
+from flask.ext.cors import CORS
 
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+
 
 @app.route('/')
 def homepage():
@@ -10,15 +13,13 @@ def homepage():
 
 
 @app.route('/getUser')
-def getUser(response):
+def getUser():
 
-    response = jsonify( {
+     return jsonify( {
     "username": "sarvesh",
     "email": "sarvesh.y305@gmail.com",
     "id": "Sarvesh19"
     } 
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
     )
 
 if __name__ == '__main__':
