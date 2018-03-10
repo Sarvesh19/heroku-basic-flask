@@ -16,7 +16,7 @@ def homepage():
 @app.route('/getUser', methods=['POST'])
 @cross_origin()
 def getUser():
-   data =  request.data;
+ 
     
      return jsonify( {
     "username": "sarvesh",
