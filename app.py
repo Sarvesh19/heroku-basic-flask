@@ -3,16 +3,19 @@ from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/')
+@cross_origin()
 def homepage():
     
     return jsonify( { 'tasks': "hello homePage" } )
 
 
 @app.route('/getUser')
+@cross_origin()
 def getUser():
 
      return jsonify( {
