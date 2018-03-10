@@ -5,7 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return 'hello world i am flask service from heroku'
+    return {
+    "username": "admin",
+    "email": "admin@localhost",
+    "id": 42
+}
 
 
 
