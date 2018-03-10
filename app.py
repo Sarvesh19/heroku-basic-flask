@@ -19,11 +19,6 @@ def getUser():
  
 if request.method == "POST":
     
-    attempted_username = request.form['userName']
-     attempted_password = request.form['password']
-
-        if attempted_username == "sarvesh" and attempted_password == "sarvesh123":
-    
      return jsonify( {
     "username": "sarvesh",
     "email": "sarvesh.y305@gmail.com",
