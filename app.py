@@ -5,14 +5,12 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@cross_origin()
 def homepage():
     
     return jsonify( { 'tasks': "hello homePage" } )
 
 
 @app.route('/getUser')
-@cross_origin()
 def getUser():
 
      return jsonify( {
