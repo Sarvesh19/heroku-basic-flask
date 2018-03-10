@@ -10,7 +10,7 @@ def homepage():
 
 
 @app.route('/getUser')
-def getUser():
+def getUser(response):
 
     response = jsonify( {
     "username": "sarvesh",
