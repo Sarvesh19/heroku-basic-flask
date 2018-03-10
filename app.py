@@ -13,9 +13,9 @@ def homepage():
 def getUser():
     
     return jsonify( {
-    "username": "admin",
-    "email": "admin@localhost",
-    "id": 42
+    "username": "sarvesh",
+    "email": "sarvesh.y305@gmail.com",
+    "id": "Sarvesh19"
 } )
 
 if __name__ == '__main__':
