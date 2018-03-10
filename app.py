@@ -18,7 +18,6 @@ def homepage():
 def getUser():
 data = request.get_json()
 
-if data.userName == 'sarvesh' and data.password == 'sarvesh123': 
     
      return jsonify( {
     "username": "sarvesh",
@@ -26,7 +25,6 @@ if data.userName == 'sarvesh' and data.password == 'sarvesh123':
     "id": "Sarvesh19"
     } 
     )
-  else return 'Not Authorize Person'  
     
 
 if __name__ == '__main__':
