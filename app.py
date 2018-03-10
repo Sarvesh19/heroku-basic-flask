@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from flask_cors import CORS, cross_origin
 
 
@@ -16,7 +16,6 @@ def homepage():
 @app.route('/getUser', methods=['POST'])
 @cross_origin()
 def getUser():
-data = request.get_json()
 
     
      return jsonify( {
