@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from datetime import datetime
 
 app = Flask(__name__)
@@ -7,18 +7,11 @@ app = Flask(__name__)
 def homepage():
     #the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
-    return {
-    "employees": [
-        1, 
-        2, 
-        3, 
-        4, 
-        5, 
-        6, 
-        7, 
-        8
-    ]
-}
+    return jsonify(
+        username='sarvesh',
+        email=g.'dwdwd@ce.com',
+        id='14'
+    )
 )
 
 
