@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return 'hello'
-)
+    return 'hello world i am flask service from heroku'
+
 
 
 if __name__ == '__main__':
