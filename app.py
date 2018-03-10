@@ -7,11 +7,7 @@ app = Flask(__name__)
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
-    return jsonify(
-        username='sarvesh',
-        email='dwdwd@ce.com',
-        id='14'
-    )
+    return "hello"
 )
 
 
