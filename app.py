@@ -9,7 +9,7 @@ def homepage():
 
     return jsonify(
         username='sarvesh',
-        email=g.'dwdwd@ce.com',
+        email='dwdwd@ce.com',
         id='14'
     )
 )
