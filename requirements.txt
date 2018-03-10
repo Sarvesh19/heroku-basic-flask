@@ -1,2 +1,4 @@
 Flask
 gunicorn
+CORS
+cross_origin
