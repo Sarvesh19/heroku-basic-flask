@@ -10,7 +10,7 @@ app.config['CORS_HEADERS'] = 'Content-Type: application/json'
 @cross_origin()
 def homepage():
     
-    return jsonify( { 'tasks': "hello homePage" } )
+    return jsonify( { 'tasks': "hello Rajeshwar" } )
 
 
 @app.route('/getUser', methods=["GET","POST"])
